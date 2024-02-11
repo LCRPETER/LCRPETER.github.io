@@ -1,0 +1,88 @@
+.contact {
+  background: $color1;
+  margin: $fs-p7 $fs-p1 $fs-p9 $fs-p1;
+  @include df;
+  grid-template-columns: 1fr 1fr;
+  overflow-x: hidden;
+  form {
+    display: grid;
+    text-align: left;
+    padding: $fs-p8;
+    label {
+      @extend ff-fs-p;
+    }
+    input {
+      @extend ip-ta;
+      padding: $fs-p3;
+      &[type="submit"] {
+        color: $color4;
+        width: 135px;
+        font-size: 0.7rem;
+        cursor: pointer;
+        font-family: $ff2;
+        margin: $fs-p7 $fs-p1 70px $fs-p1;
+        transition: 0.3s ease;
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.3s ease;
+        }
+      }
+    }
+
+    textarea {
+      @extend ip-ta;
+      resize: none;
+    }
+  }
+}
+.section-footer {
+  display: grid;
+  text-align: left;
+  div {
+    display: flex;
+    align-items: center;
+    border-left: 0.1px solid $color5;
+    border-bottom: 0.1px solid $color5;
+    padding: $fs-p8;
+    h4 {
+      @extend ff-fs-p;
+      width: $fs-p10;
+    }
+    p {
+      font-size: 0.7rem;
+    }
+  }
+  .container-social {
+    border-bottom: none;
+    padding: $fs-p5 $fs-p8;
+    .icon {
+      width: 100%;
+      border: none;
+      @include df2;
+      float: right;
+      div {
+        border: none;
+        li {
+          border: 0.1px solid $color5;
+          width: $fs-p7;
+          padding: 4px;
+          border-radius: $fs-p10;
+          text-align: center;
+          margin: 0 $fs-p2;
+          cursor: pointer;
+          transition: 0.5s ease;
+          &:hover {
+            background: $color3;
+            color: $color2;
+            transition: 0.2s ease;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .contact {
+    display: block;
+  }
+}

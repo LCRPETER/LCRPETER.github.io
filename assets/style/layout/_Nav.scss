@@ -1,0 +1,49 @@
+nav {
+  @include df;
+  background: $color2-t;
+  color: $color1;
+  .list {
+    @include df2;
+    li {
+      font-family: $ff2;
+      font-size: $fs1;
+      letter-spacing: 2px;
+      padding: $fs-p6;
+      cursor: pointer;
+      &:hover {
+        background: $color1;
+        color: $color3;
+      }
+    }
+  }
+  .icon {
+    padding: $fs-p5;
+
+    div {
+      @include df2;
+      width: 50%;
+      float: right;
+      li {
+        font-size: $fs3;
+        cursor: pointer;
+        transition: 0.2s ease;
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1188px) {
+    .icon {
+      padding: $fs-p7;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  nav {
+    display: block;
+  }
+  .icon {
+    display: none;
+  }
+}

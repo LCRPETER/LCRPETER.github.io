@@ -1,0 +1,15 @@
+button {
+  border-top: 1px solid $color3;
+  border-bottom: 2px solid $color3;
+  background: transparent;
+  padding: $fs-p3 25px;
+  font-size: $fs1;
+  cursor: pointer;
+  font-family: $ff2;
+  margin: $fs-p7 $fs-p1 70px $fs-p1;
+  transition: 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+  }
+}

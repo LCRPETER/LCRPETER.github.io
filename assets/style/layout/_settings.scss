@@ -1,0 +1,128 @@
+// font 1
+@font-face {
+  font-family: "Merriweather";
+  src: url(/assets/fonts/Merriweather/Merriweather-Light.ttf);
+}
+// font 2
+@font-face {
+  font-family: "inter";
+  src: url(/assets/fonts/Inter/Inter-ExtraBold.ttf);
+}
+// global
+
+// font family
+
+$ff1: Merriweather;
+$ff2: inter;
+
+// font size
+
+$fs1: 0.7rem;
+$fs2: 0.8rem;
+$fs3: 0.9rem;
+$fs4: 1rem;
+$fs5: 1.5rem;
+$fs6: 2rem;
+$fs7: 2.5rem;
+$fs8: 3.2rem;
+
+$fs-p1: 0px;
+$fs-p2: 5px;
+$fs-p3: 10px;
+$fs-p4: 15px;
+$fs-p5: 20px;
+$fs-p6: 25px;
+$fs-p7: 30px;
+$fs-p8: 40px;
+$fs-p9: 50px;
+$fs-p10: 100px;
+$fs-p11: 155px;
+$fs-p12: 400px;
+
+// color
+
+$color1: #f2f0f0;
+$color2: #ffffff;
+$color3: #222831;
+$color4: #757575;
+$color5: #dddddd;
+$color2-t: #babec36d;
+
+// padding
+
+//margin
+
+$m: $fs-p1 auto;
+
+@mixin m-w {
+  padding: $fs-p2;
+  margin: $m;
+  letter-spacing: $fs-p2;
+}
+@mixin p-i {
+  font-size: $fs3;
+  font-style: italic;
+  padding: $fs-p2 $fs-p1;
+}
+
+@mixin df {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+@mixin df2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin df3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// font family, size, padding, color
+
+ff-fs-p {
+  font-family: $ff2;
+  font-size: $fs1;
+  padding: $fs-p5 $fs-p1;
+  color: $color4;
+}
+
+// input textearea
+
+ip-ta {
+  background: transparent;
+  padding: $fs-p3;
+  border: 1px solid $color5;
+  border-radius: $fs-p2;
+  &:focus {
+    outline: none;
+  }
+}
+
+// Appliquer à tout les élements
+
+* {
+  padding: $fs-p1;
+  margin: $fs-p1;
+  box-sizing: border-box;
+  font-family: $ff1;
+  list-style: none;
+}
+
+// image backgroud fixe fixed
+html {
+  background: url(/assets/images/bg.jpg) center/cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+// body
+body {
+  width: 80%;
+  margin: $fs-p1 auto;
+  text-align: center;
+  color: $color3;
+  overflow-x: hidden;
+}

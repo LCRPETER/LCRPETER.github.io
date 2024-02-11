@@ -1,0 +1,85 @@
+@import "./layout/settings";
+@import "./layout/nav";
+@import "./layout/header";
+@import "./layout/section-footer";
+@import "./layout/section1";
+@import "./components/button";
+
+@media screen and (max-width: 500px) {
+  .contact {
+    display: block;
+  }
+}
+@media screen and (max-width: 400px) {
+  body {
+    width: 90%;
+  }
+  header {
+    padding: $fs-p10 $fs-p1;
+    h1 {
+      font-size: $fs5;
+    }
+    p {
+      @include p-i;
+      padding: $fs-p6 $fs-p1 $fs-p7 $fs-p1;
+      font-size: 13px;
+    }
+    .arrow-down {
+      font-size: $fs4;
+      cursor: pointer;
+      transition: 0.5s ease;
+      a {
+        padding: $fs-p2 $fs-p3;
+      }
+    }
+  }
+  nav {
+    .list {
+      li {
+        font-size: $fs-p3;
+        padding: $fs-p2;
+      }
+    }
+  }
+  .section-1 {
+    h5 {
+      font-size: 12px;
+      margin: $fs-p1 $fs-p5;
+      overflow: hidden;
+      &::after {
+        width: 100px;
+        margin: 8px -200px;
+      }
+      &::before {
+        width: 100px;
+        margin: 8px 100px;
+      }
+    }
+    div {
+      padding: $fs-p3;
+      h2 {
+        font-size: $fs-p5;
+        padding: $fs-p7 $fs-p4;
+      }
+      p {
+        font-size: 12px;
+        line-height: 30px;
+        padding: $fs-p7 $fs-p1;
+      }
+    }
+    .container-bottom {
+      padding: $fs-p1;
+      .box {
+        padding: $fs-p7;
+
+        h4 {
+          font-size: $fs4;
+        }
+        button {
+          padding: $fs-p2 $fs-p4;
+          font-size: $fs1;
+        }
+      }
+    }
+  }
+}

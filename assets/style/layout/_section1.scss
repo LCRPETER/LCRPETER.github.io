@@ -1,0 +1,99 @@
+.section-1 {
+  background: $color2;
+  min-height: 100vh;
+  padding: $fs-p9 $fs-p1 $fs-p3 $fs-p1;
+  h5 {
+    font-size: $fs2;
+    font-weight: $fs-p12;
+    position: relative;
+    margin: $fs-p1 $fs-p10;
+    overflow: hidden;
+    &::after {
+      content: "";
+      width: 347px;
+      height: 1.5px;
+      background: $color5;
+      margin: 6px -478px;
+      position: absolute;
+    }
+    &::before {
+      content: "";
+      width: 347px;
+      height: 1.5px;
+      background: $color5;
+      margin: 6px 130px;
+      position: absolute;
+    }
+  }
+
+  div {
+    h2 {
+      font-family: $ff2;
+      font-size: $fs7;
+      padding: $fs-p9;
+      padding-bottom: $fs-p7;
+    }
+    p {
+      @include p-i;
+      font-size: $fs1;
+      line-height: $fs-p7;
+      padding-bottom: $fs-p7;
+    }
+  }
+  div {
+    padding: $fs-p1 $fs-p9;
+    img {
+      width: 100%;
+    }
+  }
+  .container-bottom {
+    @include df2;
+    padding: $fs-p1;
+    border-top: 2px solid $color5;
+    .box {
+      padding: $fs-p7 $fs-p9;
+      margin: $fs-p1;
+      h6 {
+        font-size: $fs1;
+        font-weight: $fs-p12;
+      }
+      h4 {
+        padding: $fs-p5;
+        font-family: $ff2;
+        font-size: $fs3;
+        letter-spacing: 2px;
+      }
+      p {
+        text-align: left;
+        font-style: normal;
+        padding: $fs-p3 $fs-p2;
+        line-height: $fs-p7;
+      }
+      .s-box {
+        padding: $fs-p1;
+      }
+      button {
+        margin-bottom: $fs-p1;
+      }
+    }
+  }
+  @media screen and (max-width: 850px) {
+    .container-bottom {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 678px) {
+    div {
+      h2 {
+        font-size: $fs6;
+      }
+    }
+  }
+  @media screen and (max-width: 538px) {
+    div {
+      h2 {
+        font-size: $fs5;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+header {
+  color: $color1;
+  padding: $fs-p11 $fs-p1;
+  h1 {
+    @include m-w;
+    font-family: $ff2;
+    font-size: $fs8;
+  }
+  p {
+    @include p-i;
+    padding: $fs-p8 $fs-p1 $fs-p9 $fs-p1;
+  }
+  .arrow-down {
+    font-size: $fs4;
+    cursor: pointer;
+    transition: 0.5s ease;
+    a {
+      color: $color5;
+      padding: $fs-p3 $fs-p4;
+      border: 1px solid $color5;
+      border-radius: $fs-p10;
+      &:hover {
+        background: $color5;
+        color: $color3;
+        transition: 0.2s ease;
+      }
+    }
+  }
+
+  @media screen and (max-width: 678px) {
+    h1 {
+      font-size: $fs7;
+    }
+  }
+  @media screen and (max-width: 538px) {
+    h1 {
+      font-size: $fs6;
+    }
+  }
+}
